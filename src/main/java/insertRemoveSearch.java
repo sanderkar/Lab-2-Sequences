@@ -8,6 +8,7 @@ public class insertRemoveSearch {
 
     // TODO: Implement
     throw new RuntimeException("Not implemented yet");
+
   }
 
 
@@ -36,9 +37,44 @@ public class insertRemoveSearch {
   /**
    * Propose an algorithm the finds both the minimum and the maximum of the sequence.
    */
-  public int[] extrema(){
-    // TODO: Implement
-    throw new RuntimeException("Not implemented yet");
+  public int[] extrema() {
+    int i = 2;
+    int minimum = items[1];
+    int maximum = items [1];
+    while (i <= this.length) {
+      if (items[i] > maximum) {
+        maximum = items [i];
+      }
+      if (items[i] < minimum){
+        minimum = items[i];
+      }
+      i++;
+    }
+    return new int[] {minimum, maximum};
+  }
+
+
+  /**
+   * Finding duplicates
+   */
+  public boolean hasDuplicate() {
+    int i = 1;
+    int countCounter = 0;
+    while (countCounter < 2 && i <= this.length) {
+      countCounter = 0;
+      for (int j = 1; j <= this.length && countCounter < 2; j++) {
+        if (items[j] == items[i]){
+          countCounter = countCounter +1;
+        }
+      }
+      i = i +1;
+    }
+    if (countCounter > 1) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
 
