@@ -4,10 +4,7 @@ public class Counter {
 
     public void increment() {
         // TODO: Implement, by calling digits[i].next() when appropriate
+
     }
 
-}
-
-class DigitDisplay {
-    // ...
 }

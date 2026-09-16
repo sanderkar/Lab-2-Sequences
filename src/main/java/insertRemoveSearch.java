@@ -1,5 +1,8 @@
 public class insertRemoveSearch {
 
+  private int[] items;
+  private int length;
+
   public void insert(int item, int index){
     /**
      * Implement the insert function, which inserts the given item at the given position.
@@ -38,7 +41,7 @@ public class insertRemoveSearch {
    * Propose an algorithm the finds both the minimum and the maximum of the sequence.
    */
   public int[] extrema() {
-    int i = 2;
+    int i = 0;
     int minimum = items[1];
     int maximum = items [1];
     while (i <= this.length) {
@@ -58,18 +61,18 @@ public class insertRemoveSearch {
    * Finding duplicates
    */
   public boolean hasDuplicate() {
-    int i = 1;
-    int countCounter = 0;
-    while (countCounter < 2 && i <= this.length) {
-      countCounter = 0;
-      for (int j = 1; j <= this.length && countCounter < 2; j++) {
+    int i = 0;
+    int counter = 0;
+    while (counter < 2 && i <= this.length) {
+      counter = 0;
+      for (int j = 1; j <= this.length && counter < 2; j++) {
         if (items[j] == items[i]){
-          countCounter = countCounter +1;
+          counter = counter + 1;
         }
       }
-      i = i +1;
+      i = i + 1;
     }
-    if (countCounter > 1) {
+    if (counter > 1) {
       return true;
     }
     else {
