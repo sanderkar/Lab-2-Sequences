@@ -27,15 +27,13 @@ public class insertRemoveSearch {
    * or 0 if the sequence does not include that item.
    */
   public int search(int item){
-    // TODO: Implement
-
-    int indexvalue = 0;
+    int indexcounter = 0;
     for(int i = 0; i < items.length; i++){
       if(items[i] == item){
         return i;
       }
     }
-    throw new RuntimeException("Not implemented yet");
+    return 0;
   }
 
 
