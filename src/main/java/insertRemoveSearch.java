@@ -7,8 +7,8 @@ public class insertRemoveSearch {
      */
 
     // TODO: Implement
-    throw new RuntimeException("Not implemented yet");
 
+    throw new RuntimeException("Not implemented yet");
   }
 
 
@@ -28,6 +28,13 @@ public class insertRemoveSearch {
    */
   public int search(int item){
     // TODO: Implement
+
+    int indexvalue = 0;
+    for(int i = 0; i < items.length; i++){
+      if(items[i] == item){
+        return i;
+      }
+    }
     throw new RuntimeException("Not implemented yet");
   }
 
@@ -57,6 +64,7 @@ public class insertRemoveSearch {
   /**
    * Finding duplicates
    */
+
   public boolean hasDuplicate() {
     int i = 1;
     int countCounter = 0;
