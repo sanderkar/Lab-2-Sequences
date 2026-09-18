@@ -109,10 +109,7 @@ public class Sequence {
    * @return an
    */
   public int search(int item){
-    int indexcounter = 0;
-
-
-    for(int i = 0; i < items.length; i++){
+    for(int i = 1; i < items.length; i++){
       if(items[i] == item){
         return i;
       }
