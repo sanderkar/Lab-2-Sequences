@@ -97,8 +97,29 @@ public class Sequence {
    * @param index the index that must be removed.
    */
   public void remove(int index) {
-    // TODO: Implement
-    throw new RuntimeException("Not yet implemented.");
+    if (this.length == 0) {
+      throw new IllegalArgumentException("Cannot remove from an empty sequence");
+    }
+    int[] tempItems;
+    int internalIndex = index - 1;
+    if (internalIndex < 0 || internalIndex >= this.length) {
+      throw new IllegalArgumentException("Invalid index!");
+    }
+    this.length--;
+    if (this.length <= this.capacity / 4) {
+      this.capacity = this.capacity / 2;
+    }
+    tempItems = new int[capacity];
+    int i = 0;
+    while (i < internalIndex) {
+      tempItems[i] = items[i];
+      i++;
+    }
+    while (i < this.length) {
+      tempItems[i] = items[i+1];
+      i++;
+    }
+    this.items = tempItems;
   }
 
   /**
