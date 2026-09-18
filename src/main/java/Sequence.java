@@ -111,7 +111,7 @@ public class Sequence {
   public int search(int item){
     for(int i = 1; i < items.length; i++){
       if(items[i] == item){
-        return i;
+        return i+1;
       }
     }
     return 0;
