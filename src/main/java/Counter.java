@@ -66,8 +66,12 @@ public class Counter {
    * Increment the counter by one
    */
   public void increment() {
-    // TODO: Implement
-    throw new RuntimeException("Not yet implemented.");
+    for (var digit : digits) {
+      digit.next();
+      if (!digit.isZero()) {
+        break;
+      }
+    }
   }
 
   /**
