@@ -108,9 +108,16 @@ public class Sequence {
    * @param item the item whose index must be found
    * @return an
    */
-  public int search(int item) {
-    // TODO: Implement
-    throw new RuntimeException("Not yet implemented.");
+  public int search(int item){
+    int indexcounter = 0;
+
+
+    for(int i = 0; i < items.length; i++){
+      if(items[i] == item){
+        return i;
+      }
+    }
+    return 0;
   }
 
   /**
